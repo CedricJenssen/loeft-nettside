@@ -13,7 +13,7 @@ import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
 
 import Balancer from "react-wrap-balancer";
-import Logo from "@/public/logo.svg";
+import Logo from "@/public/lft_dark.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -41,7 +41,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP73pNWABj6BSqb2KGoYD6i-lP5of_Fh0&libraries=places&language=no&region=NO"
+          async
+          defer
+        ></script>
+      </head>
       <body className={cn("min-h-screen font-sans antialiased", font.variable)}>
         <ThemeProvider
           attribute="class"
@@ -81,7 +87,6 @@ const Nav = ({ className, children, id }: NavProps) => {
             width={42}
             height={26.44}
           ></Image>
-          <h2 className="text-sm">{siteConfig.site_name}</h2>
         </Link>
         {children}
         <div className="flex items-center gap-2">
@@ -94,8 +99,8 @@ const Nav = ({ className, children, id }: NavProps) => {
               </Button>
             ))}
           </div>
-          <Button asChild className="hidden sm:flex">
-            <Link href="https://github.com/9d8dev/next-wp">Get Started</Link>
+          <Button asChild variant="loeft">
+            <Link href="https://github.com/9d8dev/next-wp">Få tilbud</Link>
           </Button>
           <MobileNav />
         </div>
