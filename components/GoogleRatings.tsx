@@ -28,7 +28,7 @@ export default function GoogleRating() {
         rel="noopener noreferrer"
         className="hover:underline"
       >
-        ⭐ {data.rating} / 5 basert på {data.reviews} anmeldelser på Google
+        {data.rating} / 5 basert på {data.reviews} anmeldelser på Google
       </a>
     </div>
   );

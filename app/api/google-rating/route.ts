@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const GOOGLE_API_KEY = 'AIzaSyCP73pNWABj6BSqb2KGoYD6i-lP5of_Fh0';
+const GOOGLE_API_KEY = 'AIzaSyAJDC93V0uZ03PdRd9KcCr8itEA-OoBKkI';
 const PLACE_ID = 'ChIJ7cfAZgdvQUYRuInuAZtZjUU';
 
 export async function GET() {
