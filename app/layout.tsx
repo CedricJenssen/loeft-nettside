@@ -73,7 +73,7 @@ const Nav = ({ className, children, id }: NavProps) => {
     >
       <div
         id="nav-container"
-        className="max-w-5xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center"
+        className="max-w-7xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center"
       >
         <Link
           className="hover:opacity-75 transition-all flex gap-4 items-center"
@@ -100,7 +100,7 @@ const Nav = ({ className, children, id }: NavProps) => {
             ))}
           </div>
           <Button asChild variant="loeft">
-            <Link href="https://github.com/9d8dev/next-wp">Få tilbud</Link>
+            <Link href="/tilbud">Få tilbud</Link>
           </Button>
           <MobileNav />
         </div>
@@ -157,8 +157,7 @@ const Footer = () => {
         <Container className="border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center">
           <ThemeToggle />
           <p className="text-muted-foreground">
-            &copy; <a href="https://9d8.dev">9d8</a>. All rights reserved.
-            2025-present.
+            &copy;2025 LØFT Flyttebyrå
           </p>
         </Container>
       </Section>
