@@ -27,16 +27,21 @@ export async function POST(req: Request) {
   }
 
   // Send til Zapier
-  try {
-    await fetch('https://hooks.zapier.com/hooks/catch/14869276/uyis77u/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-  } catch (err) {
-    console.error('Zapier-feil:', (err as Error).message);
+  const zapierUrl = process.env.ZAPIER_WEBHOOK_URL;
+
+  if (zapierUrl) {
+    try {
+      await fetch(zapierUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+    } catch (err) {
+      console.error('Zapier-feil:', (err as Error).message);
+    }
+  } else {
+    console.warn('ZAPIER_WEBHOOK_URL mangler i miljøvariabler');
   }
 
   return new Response(JSON.stringify({ success: true }), { status: 200 });
 }
-
