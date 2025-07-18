@@ -1,12 +1,9 @@
-import MultiStepForm from '@/components/MultiStepForm';
+import MultiStepForm from '@/components/form/MultiStepForm';
 
-export default function TilbudPage() {
+export default function KontaktPage() {
   return (
-    <main className="min-h-screen p-8 bg-white text-black">
-      <h1 className="text-3xl font-bold mb-6 text-center">Få et gratis & uforpliktende tilbud</h1>
-      <div className="flex items-center justify-center">
-          <MultiStepForm />
-      </div>
-    </main>
+    <div className="max-w-2xl mx-auto p-6">
+      <h1 className="text-2xl font-bold mb-4">Flytteforespørsel</h1>
+    </div>
   );
 }

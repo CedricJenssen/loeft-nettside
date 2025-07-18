@@ -25,12 +25,25 @@ const font = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "WordPress & Next.js Starter by 9d8",
+  title: 'Løft - Profesjonell flytting i Oslo',
   description:
-    "A starter template for Next.js with WordPress as a headless CMS.",
+    'LØFT Flyttebyrå tilbyr profesjonell hjelp med flytting, bærehjelp, pakking og utvask i Oslo og omegn. Fyll ut skjemaet og få et uforpliktende tilbud i dag.',
+  icons: {
+    icon: '/favicon.ico',
+  },
+  keywords: [
+    'flyttebyrå Oslo',
+    'flytting Oslo',
+    'bærehjelp',
+    'utvask',
+    'pakkehjelp',
+    'rimelig flyttehjelp',
+    'LØFT flyttefirma',
+    'gratis flyttetilbud',
+  ],
   metadataBase: new URL(siteConfig.site_domain),
   alternates: {
-    canonical: "/",
+    canonical: '/',
   },
 };
 
@@ -68,7 +81,7 @@ export default function RootLayout({
 const Nav = ({ className, children, id }: NavProps) => {
   return (
     <nav
-      className={cn("sticky z-50 top-0 bg-background", "border-b", className)}
+      className={cn("sticky z-50 top-0 bg-background", className)}
       id={id}
     >
       <div
@@ -99,7 +112,7 @@ const Nav = ({ className, children, id }: NavProps) => {
               </Button>
             ))}
           </div>
-          <Button asChild variant="loeft">
+          <Button asChild variant="loeft" className="rounded-full">
             <Link href="/tilbud">Få tilbud</Link>
           </Button>
           <MobileNav />

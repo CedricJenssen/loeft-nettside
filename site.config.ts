@@ -5,7 +5,7 @@ type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  site_name: "LØFT",
+  site_name: "Løft",
   site_description: "Profesjonell flyttehjelp i Oslo og omegn",
   site_domain: "https://loeft.no",
 };
